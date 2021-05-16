@@ -1,0 +1,230 @@
+<html>
+<head>
+  <title>Radhe - Your Most Wanted Bhai | Avishkar Patil</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.zee5.com/images/ZEE5_logo.svg">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet"/>
+  <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/3.1.3/dash.all.min.js"></script>
+</head>
+<style>
+html {
+  font-family: Poppins;
+  background: #000;
+  margin: 0;
+  padding: 0
+}
+.loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+    
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #00b3ff;
+        font-family: 'Quattrocento Sans', sans-serif;
+    }
+    
+    .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(7) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(8) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.4s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(9) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.6s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(10) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.8s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(11) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(12) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(13) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2.4s infinite linear alternate;
+    }
+    
+    @keyframes blur-text {
+        0% {
+            filter: blur(0px);
+        }
+        100% {
+            filter: blur(4px);
+        }
+    }
+      .plyr__video-wrapper::before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        content: '';
+        height: 35px;
+        width: 35px;
+        background: url('https://telegra.ph/file/22da4d29204c748a526a4.png') no-repeat;
+        background-size: 35px auto, auto;
+    }
+
+	.plyr__video-wrapper::after {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        content: '';
+        height: 30px;
+        width: 30px;
+        background: url('https://www.zee5.com/images/ZEE5_logo.svg') no-repeat;
+        background-size: 30px auto, auto;
+    }
+</style>
+<body>
+  <div id="loading" class="loading">
+<div class="loading-text">
+    <span class="loading-text-words">A</span>
+    <span class="loading-text-words">V</span>
+    <span class="loading-text-words">I</span>
+    <span class="loading-text-words">S</span>
+    <span class="loading-text-words">H</span>
+    <span class="loading-text-words">K</span>
+    <span class="loading-text-words">A</span>
+    <span class="loading-text-words">R</span>
+</div>
+</div>
+  <video poster="https://akamaividz.zee5.com/resources/0-0-399328/list/1170x658/1170x658withlog_2029309951.jpg" id="videoContainer">
+  </video>
+  </div>
+</body>
+<script>
+  setTimeout(videovisible, 4000)
+function videovisible() {
+    document.getElementById('loading').style.display = 'none'
+}
+const video = document.getElementById("videoContainer");
+    document.addEventListener("DOMContentLoaded", function() {
+        const source = "https://zee5vod.akamaized.net/drm1/elemental/dash/ORIGINAL_CONTENT_BRO/TVOD/RADHE/RADHE_MOVIE_UCV_Rev_hi_c6eafbad0ca60f103b221a0478cca9b1/manifest.mpd";
+        const dash = dashjs.MediaPlayer().create();
+        var defaultOptions = {
+            "autoplay": false,
+            "muted": false,
+            "loop": {
+                "active": false
+            },
+            "captions": {
+                "active": true,
+                "update": true
+            }
+        };
+        dash.initialize(video, source, false);
+        dash.updateSettings({
+            streaming: {
+                abr: {
+                    autoSwitchBitrate: {
+                        audio: false,
+                        video: false
+                    }
+                },
+                fastSwitchEnabled: true,
+                lowLatencyEnabled: true
+            }
+        });
+        dash.setProtectionData({
+            "com.widevine.alpha": {
+                "serverURL": "https://wv-keyos-aps1.licensekeyserver.com/",
+                "httpRequestHeaders":{"customdata":"PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMjEtMDUtMTYgMDk6MjY6MjMuMzk5PC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAyMS0wNS0xOCAwOToyNjoyMy4zOTk8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5kZmEwMjY1YzI4YTM0MTEwYjI5MDNlNWEzMzM5NGExZDwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmIxOWQ0MjJkODkwNjQ0ZDUxMTJkMDg0NjljMmU1OTQ2PC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0idHJ1ZSI+PExpY2Vuc2VEdXJhdGlvbj4xNzI4MDA8L0xpY2Vuc2VEdXJhdGlvbj48UGxheWJhY2tEdXJhdGlvbj4xNzI4MDA8L1BsYXliYWNrRHVyYXRpb24+PC9XaWRldmluZVBvbGljeT48V2lkZXZpbmVDb250ZW50S2V5U3BlYyBUcmFja1R5cGU9IkhEIj48U2VjdXJpdHlMZXZlbD4xPC9TZWN1cml0eUxldmVsPjwvV2lkZXZpbmVDb250ZW50S2V5U3BlYz48RmFpclBsYXlQb2xpY3kgcGVyc2lzdGVudD0idHJ1ZSI+PFBlcnNpc3RlbmNlU2Vjb25kcz4xNzI4MDA8L1BlcnNpc3RlbmNlU2Vjb25kcz48L0ZhaXJQbGF5UG9saWN5PjxMaWNlbnNlIHR5cGU9InNpbXBsZSI+PFBvbGljeT48SWQ+Nzc4ZDA5YmUtN2M1NC00YTM3LWExODItZTZjOTk4ODgyMGQ2PC9JZD48L1BvbGljeT48UGxheT48SWQ+NjI4ZTE3NGUtNDFmOS00OTY0LThiNDAtZjJiMmY2NjM0MjliPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQb2xpY3kgaWQ9Ijc3OGQwOWJlLTdjNTQtNGEzNy1hMTgyLWU2Yzk5ODg4MjBkNiIgcGVyc2lzdGVudD0idHJ1ZSI+PEV4cGlyYXRpb25BZnRlckZpcnN0UGxheT4xNzI4MDA8L0V4cGlyYXRpb25BZnRlckZpcnN0UGxheT48TWluaW11bVNlY3VyaXR5TGV2ZWw+MjAwMDwvTWluaW11bVNlY3VyaXR5TGV2ZWw+PC9Qb2xpY3k+PFBsYXkgaWQ9IjYyOGUxNzRlLTQxZjktNDk2NC04YjQwLWYyYjJmNjYzNDI5YiI+PE91dHB1dFByb3RlY3Rpb25zPjxPUEw+PENvbXByZXNzZWREaWdpdGFsQXVkaW8+MzAwPC9Db21wcmVzc2VkRGlnaXRhbEF1ZGlvPjxVbmNvbXByZXNzZWREaWdpdGFsQXVkaW8+MzAwPC9VbmNvbXByZXNzZWREaWdpdGFsQXVkaW8+PENvbXByZXNzZWREaWdpdGFsVmlkZW8+NTAwPC9Db21wcmVzc2VkRGlnaXRhbFZpZGVvPjxVbmNvbXByZXNzZWREaWdpdGFsVmlkZW8+MzAwPC9VbmNvbXByZXNzZWREaWdpdGFsVmlkZW8+PEFuYWxvZ1ZpZGVvPjIwMDwvQW5hbG9nVmlkZW8+PC9PUEw+PC9PdXRwdXRQcm90ZWN0aW9ucz48RW5hYmxlcnM+PElkPjc4NjYyN2Q4LWMyYTYtNDRiZS04Zjg4LTA4YWUyNTViMDFhNzwvSWQ+PElkPmQ2ODUwMzBiLTBmNGYtNDNhNi1iYmFkLTM1NmYxZWEwMDQ5YTwvSWQ+PElkPjAwMmY5NzcyLTM4YTAtNDNlNS05Zjc5LTBmNjM2MWRjYzYyYTwvSWQ+PC9FbmFibGVycz48L1BsYXk+PC9EYXRhPjxTaWduYXR1cmU+ZXJUeXRpSXpNWktoMUdCcHpnaVBPZWwycEFJS29QOGhQZEg1clJwSCtIMHRxMEhsZm5naTZZTEorS0E3eDlaWTBacmtIelhJMkZ2Q2lMWGRRN2hiU01FWUljOXJ1NHRGS083ako5SGF0WGo4M3lZYUtBMlVUQmFIVEQ0UlBOcFZPZlNSTW9TNVloc09qLzBjVFR3K3gvZW4wdXNLWHhDcDF4cGN6ZllhU0pkOWFzTGxNL0d6NlJIRFJDRDhlWnZ2VDY2bmhpb05LeVk3dytUZEJ5ZU4rb2phYnIxcFd4c2tycUozeVNVRnZoNDFJU0xqTmplMnRrUUJpdkplS3E0c24rdktIZUhpc0JuOXN6U3cyNW01dTRCTjNRNXkvci9LTG5QRFhsWGVoZTk5VWNNV3d4WnFaTEJwVGZGbFlyNjJVUGozS0s0Y3RjY2lib0s4dWZWa2ZBPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+"
+                }
+            },
+            "com.microsoft.playready": {
+                "serverURL": "https://pr-keyos-aps1.licensekeyserver.com/core/rightsmanager.asmx",
+                "httpRequestHeaders":{"customdata":"PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMjEtMDUtMTYgMDk6MjY6MjMuMzk5PC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAyMS0wNS0xOCAwOToyNjoyMy4zOTk8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5kZmEwMjY1YzI4YTM0MTEwYjI5MDNlNWEzMzM5NGExZDwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmIxOWQ0MjJkODkwNjQ0ZDUxMTJkMDg0NjljMmU1OTQ2PC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0idHJ1ZSI+PExpY2Vuc2VEdXJhdGlvbj4xNzI4MDA8L0xpY2Vuc2VEdXJhdGlvbj48UGxheWJhY2tEdXJhdGlvbj4xNzI4MDA8L1BsYXliYWNrRHVyYXRpb24+PC9XaWRldmluZVBvbGljeT48V2lkZXZpbmVDb250ZW50S2V5U3BlYyBUcmFja1R5cGU9IkhEIj48U2VjdXJpdHlMZXZlbD4xPC9TZWN1cml0eUxldmVsPjwvV2lkZXZpbmVDb250ZW50S2V5U3BlYz48RmFpclBsYXlQb2xpY3kgcGVyc2lzdGVudD0idHJ1ZSI+PFBlcnNpc3RlbmNlU2Vjb25kcz4xNzI4MDA8L1BlcnNpc3RlbmNlU2Vjb25kcz48L0ZhaXJQbGF5UG9saWN5PjxMaWNlbnNlIHR5cGU9InNpbXBsZSI+PFBvbGljeT48SWQ+Nzc4ZDA5YmUtN2M1NC00YTM3LWExODItZTZjOTk4ODgyMGQ2PC9JZD48L1BvbGljeT48UGxheT48SWQ+NjI4ZTE3NGUtNDFmOS00OTY0LThiNDAtZjJiMmY2NjM0MjliPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQb2xpY3kgaWQ9Ijc3OGQwOWJlLTdjNTQtNGEzNy1hMTgyLWU2Yzk5ODg4MjBkNiIgcGVyc2lzdGVudD0idHJ1ZSI+PEV4cGlyYXRpb25BZnRlckZpcnN0UGxheT4xNzI4MDA8L0V4cGlyYXRpb25BZnRlckZpcnN0UGxheT48TWluaW11bVNlY3VyaXR5TGV2ZWw+MjAwMDwvTWluaW11bVNlY3VyaXR5TGV2ZWw+PC9Qb2xpY3k+PFBsYXkgaWQ9IjYyOGUxNzRlLTQxZjktNDk2NC04YjQwLWYyYjJmNjYzNDI5YiI+PE91dHB1dFByb3RlY3Rpb25zPjxPUEw+PENvbXByZXNzZWREaWdpdGFsQXVkaW8+MzAwPC9Db21wcmVzc2VkRGlnaXRhbEF1ZGlvPjxVbmNvbXByZXNzZWREaWdpdGFsQXVkaW8+MzAwPC9VbmNvbXByZXNzZWREaWdpdGFsQXVkaW8+PENvbXByZXNzZWREaWdpdGFsVmlkZW8+NTAwPC9Db21wcmVzc2VkRGlnaXRhbFZpZGVvPjxVbmNvbXByZXNzZWREaWdpdGFsVmlkZW8+MzAwPC9VbmNvbXByZXNzZWREaWdpdGFsVmlkZW8+PEFuYWxvZ1ZpZGVvPjIwMDwvQW5hbG9nVmlkZW8+PC9PUEw+PC9PdXRwdXRQcm90ZWN0aW9ucz48RW5hYmxlcnM+PElkPjc4NjYyN2Q4LWMyYTYtNDRiZS04Zjg4LTA4YWUyNTViMDFhNzwvSWQ+PElkPmQ2ODUwMzBiLTBmNGYtNDNhNi1iYmFkLTM1NmYxZWEwMDQ5YTwvSWQ+PElkPjAwMmY5NzcyLTM4YTAtNDNlNS05Zjc5LTBmNjM2MWRjYzYyYTwvSWQ+PC9FbmFibGVycz48L1BsYXk+PC9EYXRhPjxTaWduYXR1cmU+ZXJUeXRpSXpNWktoMUdCcHpnaVBPZWwycEFJS29QOGhQZEg1clJwSCtIMHRxMEhsZm5naTZZTEorS0E3eDlaWTBacmtIelhJMkZ2Q2lMWGRRN2hiU01FWUljOXJ1NHRGS083ako5SGF0WGo4M3lZYUtBMlVUQmFIVEQ0UlBOcFZPZlNSTW9TNVloc09qLzBjVFR3K3gvZW4wdXNLWHhDcDF4cGN6ZllhU0pkOWFzTGxNL0d6NlJIRFJDRDhlWnZ2VDY2bmhpb05LeVk3dytUZEJ5ZU4rb2phYnIxcFd4c2tycUozeVNVRnZoNDFJU0xqTmplMnRrUUJpdkplS3E0c24rdktIZUhpc0JuOXN6U3cyNW01dTRCTjNRNXkvci9LTG5QRFhsWGVoZTk5VWNNV3d4WnFaTEJwVGZGbFlyNjJVUGozS0s0Y3RjY2lib0s4dWZWa2ZBPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+"
+                }
+            }
+        });
+        dash.on("streamInitialized", function() {
+            const availableQualities = dash.getBitrateInfoListFor("video").map((l) => l.height);
+            defaultOptions.quality = {
+                default: availableQualities[0].height,
+                options: availableQualities,
+                forced: true,
+                onChange: function(newQuality) {
+                    dash.getBitrateInfoListFor("video").forEach((level, levelIndex) => {
+                        if (level.height === newQuality) {
+                            dash.setQualityFor("video", level.qualityIndex);
+                        }
+                    });
+                },
+            };
+            const player = new Plyr(video, defaultOptions);
+            window.player = player;
+            window.dash = dash;
+        });
+        dash.attachView(video);
+    });
+</script>
+</html>
